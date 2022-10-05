@@ -33,7 +33,7 @@ class ViewController: UIViewController ,UITextFieldDelegate{
         
     }
     
-    // 바깥쪽 터치하면 키패드에서 나오기
+    // 바깥쪽 터치하면 키패드에서 나오기 (화면의 탭 감지)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         textField.resignFirstResponder()
     }
