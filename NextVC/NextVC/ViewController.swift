@@ -22,11 +22,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func storyboardWithCodeButtonTapped(_ sender: UIButton) {
+        let secondVC = storyboard?.instantiateViewController(withIdentifier: "secondVC") as! SecondViewController
+        secondVC.someString="두번째 화면"
+        self.present(secondVC, animated: true )
     }
     
     
     
     @IBAction func storyboardWithSegueButtonTapped(_ sender: UIButton) {
+         self.performSegue(withIdentifier: "toThirdVC", sender: self)
     }
     
  
