@@ -12,12 +12,12 @@ class FirstViewController: UIViewController {
     let mainLabel = UILabel()
     let backButton = UIButton(type: .custom)
 
-    // var  someString : String?
+     var  someString : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainLabel.text="첫번째 화면"
+        mainLabel.text = someString
         configureUI()
         
     }

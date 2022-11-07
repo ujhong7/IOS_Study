@@ -16,7 +16,7 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mainLabel.text
+        mainLabel.text=someString
     }
     
 

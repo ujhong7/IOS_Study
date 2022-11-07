@@ -68,7 +68,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="StoryBoard with Button Segue"/>
                                         <connections>
-                                            <segue destination="K1a-wn-kqu" kind="presentation" id="aFs-yP-Z6Z"/>
+                                            <segue destination="K1a-wn-kqu" kind="presentation" identifier="toFourthVC" id="aFs-yP-Z6Z"/>
                                         </connections>
                                     </button>
                                 </subviews>
