@@ -13,9 +13,12 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var adviceLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
      
-    var bmiNumber:Double?
-    var adviceString:String?
-    var bmiColor:UIColor?
+//    var bmiNumber:Double?
+//    var adviceString:String?
+//    var bmiColor:UIColor?
+    
+    // 전화면에서 전달받은 BMI를 저장하기 위한 변수
+    var bmi: BMI?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,11 @@ class SecondViewController: UIViewController {
     }
     
     func makeUI(){
+        // 전화면에서 전달받은 BMI를 통해 셋팅
+        bmiNumberLabel.text = "\(bmi!.value)"
+        bmiNumberLabel.backgroundColor = bmi?.matchColor
+        adviceLabel.text = bmi?.advice
+        
         
         bmiNumberLabel.clipsToBounds=true
         bmiNumberLabel.layer.cornerRadius=8
@@ -35,10 +43,10 @@ class SecondViewController: UIViewController {
         backButton.clipsToBounds=true
         backButton.layer.cornerRadius=5
         
-        guard let bmi = bmiNumber else {return}
-        bmiNumberLabel.text = String(bmi)
-        adviceLabel.text = adviceString
-        bmiNumberLabel.backgroundColor = bmiColor
+//        guard let bmi = bmiNumber else {return}
+//        bmiNumberLabel.text = String(bmi)
+//        adviceLabel.text = adviceString
+//        bmiNumberLabel.backgroundColor = bmiColor
     }
     
     
