@@ -16,6 +16,8 @@
 		1DB2875929377D87008AC243 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB2875829377D87008AC243 /* Member.swift */; };
 		1DB2875B2937815D008AC243 /* MemberListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB2875A2937815D008AC243 /* MemberListManager.swift */; };
 		1DB2875F293785D4008AC243 /* MyTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB2875E293785D4008AC243 /* MyTableTableViewCell.swift */; };
+		1DB2876129389FA2008AC243 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB2876029389FA2008AC243 /* DetailViewController.swift */; };
+		1DB2876329389FD3008AC243 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB2876229389FD3008AC243 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		1DB2875829377D87008AC243 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		1DB2875A2937815D008AC243 /* MemberListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListManager.swift; sourceTree = "<group>"; };
 		1DB2875E293785D4008AC243 /* MyTableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableTableViewCell.swift; sourceTree = "<group>"; };
+		1DB2876029389FA2008AC243 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1DB2876229389FD3008AC243 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				1DB2874529377A10008AC243 /* ViewController.swift */,
+				1DB2876029389FA2008AC243 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -85,8 +90,9 @@
 		1DB2875629377D16008AC243 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1DB2875E293785D4008AC243 /* MyTableTableViewCell.swift */,
 				1DB2874729377A10008AC243 /* Main.storyboard */,
+				1DB2875E293785D4008AC243 /* MyTableTableViewCell.swift */,
+				1DB2876229389FD3008AC243 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,11 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DB2875B2937815D008AC243 /* MemberListManager.swift in Sources */,
+				1DB2876329389FD3008AC243 /* DetailView.swift in Sources */,
 				1DB2874629377A10008AC243 /* ViewController.swift in Sources */,
 				1DB2875F293785D4008AC243 /* MyTableTableViewCell.swift in Sources */,
 				1DB2874229377A10008AC243 /* AppDelegate.swift in Sources */,
 				1DB2874429377A10008AC243 /* SceneDelegate.swift in Sources */,
 				1DB2875929377D87008AC243 /* Member.swift in Sources */,
+				1DB2876129389FA2008AC243 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

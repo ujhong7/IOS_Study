@@ -44,7 +44,10 @@ class ViewController: UIViewController {
     
     func setupTableView(){
         tableView.dataSource=self
+        tableView.delegate=self
         tableView.rowHeight = 60
+        
+        tableView.register(MyTableTableViewCell.self, forCellReuseIdentifier: "MemberCell")
     }
     
     func setupDatas(){
@@ -73,9 +76,30 @@ extension ViewController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath)
+        as! MyTableTableViewCell
+        
+//        cell.mainImageView.image = memberListManager[indexPath.row].memberImage
+//        cell.memberNameLabel.text = memberListManager[indexPath.row].name
+//        cell.addressLabel.text = memberListManager[indexPath.row].address
+        cell.member = memberListManager[indexPath.row]
+        cell.selectionStyle = .none
+        
+        return cell
     }
      
+
+}
+
+
+extension ViewController: UITableViewDelegate{
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        // 다음화면으로 넘어가는 코드
+        let detailVC = DetailViewController()
+         
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
     
 }

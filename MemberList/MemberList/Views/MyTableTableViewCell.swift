@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MyTableViewCell: UITableViewCell {
+class MyTableTableViewCell: UITableViewCell {
 
     //MARK: - 멤버 저장속성 구현
     // 멤버가 변할때마다 자동으로 업데이트 되도록 구현 didSet(속성 감시자) ⭐️
@@ -53,8 +53,8 @@ final class MyTableViewCell: UITableViewCell {
         return sv
     }()
     
-    //MARK: - 생성자 셋팅
     
+    //MARK: - 생성자 셋팅
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setupStackView()
@@ -75,6 +75,19 @@ final class MyTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
     //MARK: - 오토레이아웃 셋팅
     // 오토레이아웃 정하는 정확한 시점
     override func updateConstraints() {
@@ -107,4 +120,6 @@ final class MyTableViewCell: UITableViewCell {
             stackView.bottomAnchor.constraint(equalTo: self.mainImageView.bottomAnchor)
         ])
     }
+    
+
 }
